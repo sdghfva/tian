@@ -1,0 +1,162 @@
+/* ================================= 
+全局设置
+==================================== */
+* {
+    box-sizing: border-box; /*让内边距无法改变盒模型的长宽*/
+    list-style: none;    /*去除ul的小圆点*/
+    text-decoration: none; /*去除超链接的下划线*/
+}
+/* ================================= 
+移动优先CSS规则
+==================================== */
+.main-header {
+    text-align: center;
+    background-color: darkorchid;
+}
+.logo {
+    margin: 0;  /*重置logo的外边距*/
+    height: 60px;
+    white-space: 60px;
+}
+
+
+.logo a {
+    padding: .5em 0;  /*改变logo的上下内边距*/
+}
+
+.navlist li a {
+    padding: 1em 0;   /*改变导航条超链接的上下内边距*/
+}
+
+/*当鼠标移动到导航项目时，改变背景颜色*/
+.navlist li a:hover {
+    background-color:#7DB534;  
+}
+
+a {
+    /*将所有超链接变成块级元素block(超链接默认的显示方式是线级元素inline)*/
+    display:block;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.wrap {
+    min-height: calc(100vh - 54px);
+}
+
+
+
+.banner{
+    background: url("..//images/null-408d51b9cc3a5633.jpg");
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 1em 0;
+    height:  250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*z主轴排列*/
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+h1,h2{
+    margin:  0;
+    padding: 1em 0;
+}
+h2{
+    padding-top:  1em;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.col{
+    padding: 1em ;
+    background-color: chartreuse;
+    color: white;
+}
+
+
+.col p{
+    line-height: 1.4;
+}
+.col h1 {
+    text-align: center;
+    
+}
+
+.HTML{
+    background-color:#2f4f4f;
+}
+
+.CSS{
+    
+    background-color: red;
+}
+
+.JavaScript{
+    background-color: blueviolet;
+}
+ .HTML{
+  background: url(..//images/123.jpeg);
+
+}
+.CSS{
+    background: url(..//images/124.jpeg);
+}
+.JavaScript{
+    background: url(..//images/125.jpeg);
+
+}
+/***************************************************
+媒体查询700px宽
+***************************************************/
+@media(min-width:700px){
+    .main-header{
+        display: flex;
+          justify-content: space-around;
+        align-items: center;
+    }
+    
+    .navlist {
+        display: flex;
+        align-items: stretch;
+       
+    }
+    .navlist li a{
+        padding: 1em 2em;/*目录间距*/
+        border-radius: 5px;
+    }
+    
+    .banner{/*把宽度设置成500px*/
+        height: 500px;  
+    }
+    
+    .container{
+        width: 90%;
+        display: flex;
+        padding: 3em 0;
+    }
+    
+    .col{
+        flex-basis: 20%;/*弹性基础30%*/
+        flex-grow: 1; /*设定弹性子集与其他相对子集的增长*/
+        margin: 0 1em;
+        border-radius: 10px;
+    }
+    
+    .col:hover{
+        box-shadow: 1px 1px 1px rgba(0,0,0);/*阴影*/
+        transition: .3s;/*鼠标移动到的位置时有阴影延迟*/
+        cursor:  default;
+    }
+    }
+}
